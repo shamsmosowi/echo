@@ -1,6 +1,6 @@
 # echo
 a processing sketchpad app.<br>
-the goal of Echo is to empower users to create visually engaging art using computers regenrative ability
+The goal of Echo is to empower users to create visually engaging art using computers regenrative ability
 # todo 
   - element resizability 
   - control cursor type
