@@ -10,4 +10,4 @@ The goal of Echo is to empower users to create visually engaging art using compu
   - color control
   - ability to create elements
   - text support
-  
+  - import images
