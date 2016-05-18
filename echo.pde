@@ -17,6 +17,9 @@ background(255);
   Element d = new Square(200,200,50,50,color(255,200,50),color(0), 0);
   elements.add(d);
   elements.get(elements.size()-1).setType(Type.Square);
+  
+  repeatX(elements.get(0),5,5);
+  
  menu = new Menu(mouseX,pmouseY,9);
  menu.visible = false;
 }
