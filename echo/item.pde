@@ -23,7 +23,7 @@ boolean set = false;
     //stroke(50,50,50,50);
     itemSize = 47;
     }
-    ellipse(ix, iy, itemSize, itemSize);
+    //ellipse(ix, iy, itemSize, itemSize);
     pushMatrix();
     translate(-(itemSize-5)/2,-(itemSize-5)/2);
     shape(pallet,ix, iy, itemSize-5, itemSize-5); 
@@ -31,9 +31,5 @@ boolean set = false;
     popMatrix();
 		//rect(x,y,10,60);
 	}
- void mousePressed() {
-   if(dist(mouseX,mouseY,ix,iy) <itemSize-20){
-     println(mouseX,mouseY);
-   }
-  }
+ 
 }

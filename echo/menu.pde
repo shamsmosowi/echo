@@ -27,5 +27,23 @@ float y;
   }
  }
 	}
-
+  void mousePressed(){
+    
+    if(visible){
+      boolean pressed = false;
+      for(int i = 0;i<n;i++){
+        float ix  = x+Cx(60,i*(360/n));
+         float iy = y+Cy(60,i*(360/n));
+         if (dist(mouseX,mouseY,ix,iy)<itemSize){
+           println(i);
+          pressed = true;
+         }
+      }
+      if (!pressed){
+       visible = false;
+      }
+    
+    }
+  
+  }
 }

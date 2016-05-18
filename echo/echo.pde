@@ -58,6 +58,7 @@ menu.draw();
 
   void mousePressed() 
 { 
+    menu.mousePressed();
   if (mouseButton == LEFT)  // left button
   {
     if (mouseEvent.getClickCount()==2) {  // double-click
@@ -66,7 +67,7 @@ menu.draw();
 
     }
     else {
-      menu.visible = false;
+      
       println("left-click");
       for (int i = 0; i < selectedElements.size(); ++i) {
     //elements.get(i).selected = false;
@@ -100,6 +101,7 @@ void mouseDragged(){
 }
 
 void keyPressed(){
+
  // The keys included in the ASCII specification (BACKSPACE, TAB, ENTER, RETURN, ESC, and DELETE) do not require checking to see if the key is coded
   if (key == CODED) {
     float s = 2;
