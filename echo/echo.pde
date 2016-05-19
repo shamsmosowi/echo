@@ -1,5 +1,6 @@
 Element newElement;
 boolean creatingElement;
+
 boolean multi = false;
 // next task change cursor https://processing.org/reference/cursor_.html
 ArrayList<Element> elements  = new ArrayList<Element>();
@@ -16,10 +17,10 @@ background(255);
 
   Element d = new Square(Type.Square,200,200,50,50,color(255,200,50),color(0), 0);
   elements.add(d);
-
-  
-  ((Shape)elements.get(0)).repeatX(2,2);
-  
+ 
+   PVector dir = new PVector(0.9,0.8);// determines the directi
+  //((Shape)elements.get(1)).repeat(6,4,dir);
+  ((Shape)elements.get(0)).repeatD(6,4,dir);
  menu = new Menu(mouseX,pmouseY,9);
  menu.visible = false;
 }

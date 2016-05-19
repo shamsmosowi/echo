@@ -17,26 +17,43 @@ class Shape extends Element{
   void changeStroke(float c){
   	strokeSize = c;
   }
-  void repeatX(int n,float padding){
+   void repeat(int n,float padding,PVector D){
   for(int i = 1; i<n+1;i++){
      Element tempElement = new Circle(Type.Circle,200,posY,w,h,fillColor,strokeColor, strokeSize);
-   
-    float nPos = i*(this.posX + padding);
+    float nPosX = this.posX+ (i*(this.w + padding))*D.x;
+    float nPosY = this.posY+ (i*(this.h + padding))*D.y;
     if (this.elementType == Type.Circle){
-      println("circle");
-      tempElement = new Circle(Type.Circle,nPos,posY,w,h,fillColor,strokeColor, strokeSize);
+      
+      tempElement = new Circle(Type.Circle,nPosX,nPosY,w,h,fillColor,strokeColor, strokeSize);
      
     }else  if(this.elementType == Type.Square){
-      
-      tempElement = new Square(Type.Circle,nPos,posY,w,h,fillColor,strokeColor, strokeSize);
-       
-    }
-    println();
-   println(tempElement.posX,tempElement.posY,tempElement.w,tempElement.h);
+      tempElement = new Square(Type.Square,nPosX,nPosY,w,h,fillColor,strokeColor, strokeSize);
+     }
     elements.add(tempElement);
-    
-  }
+    }
 
+  }
+  
+  void repeatD(int n,float padding,PVector D){
+    for(int j = 1; j<n+1;j++){
+      float nPosX = this.posX+ (j*(this.w + padding))*D.x;
+  for(int i = 1; i<n+1;i++){
+     Element tempElement = new Circle(Type.Circle,200,posY,w,h,fillColor,strokeColor, strokeSize);
+    
+    float nPosY = this.posY+ (i*(this.h + padding))*D.y;
+    if (this.elementType == Type.Circle){
+      
+      tempElement = new Circle(Type.Circle,nPosX,nPosY,w,h,fillColor,strokeColor, strokeSize);
+     
+    }else  if(this.elementType == Type.Square){
+      tempElement = new Square(Type.Square,nPosX,nPosY,w,h,fillColor,strokeColor, strokeSize);
+     }
+    elements.add(tempElement);
+    }
+  
+  }
 }
+
+  
 
 }
