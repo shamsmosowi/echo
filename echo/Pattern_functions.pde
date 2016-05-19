@@ -17,11 +17,3 @@
 
 }
 */
-void repeatY(Element e, int n,float padding){
-   
-
-}
-void repeatXY(Element e, int n){
-
-
-}

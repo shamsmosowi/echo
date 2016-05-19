@@ -42,5 +42,24 @@ class Element{
   void move(float x, float y){
   posX = posX+x;posY =posY+y;
   }
-
+  void draw(){
+  switch(this.elementType){
+    case Circle:
+    ((Circle)this).draw();
+    break;
+    case Square:
+      ((Square)this).draw();
+      break;  
+    }
+  }
+  void select(){
+   if (dist(mouseX,mouseY,this.posX,this.posY)<this.w){
+       selectedElements.add(this);
+       elements.remove(this);
+    } 
+  }
+  void deSelect(){
+      elements.add(selectedElements.get(selectedElements.size()-1));
+      selectedElements.remove(selectedElements.size()-1);
+  }
 }
