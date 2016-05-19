@@ -41,13 +41,14 @@ class Shape extends Element{
      Element tempElement = new Circle(Type.Circle,200,posY,w,h,fillColor,strokeColor, strokeSize);
     
     float nPosY = this.posY+ (i*(this.h + padding))*D.y;
-    if (this.elementType == Type.Circle){
-      
+    switch(this.elementType){
+    case Circle:
       tempElement = new Circle(Type.Circle,nPosX,nPosY,w,h,fillColor,strokeColor, strokeSize);
-     
-    }else  if(this.elementType == Type.Square){
+     break;
+    case Square:
       tempElement = new Square(Type.Square,nPosX,nPosY,w,h,fillColor,strokeColor, strokeSize);
-     }
+      break;  
+   }
     elements.add(tempElement);
     }
   

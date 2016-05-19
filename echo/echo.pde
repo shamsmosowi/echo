@@ -44,12 +44,13 @@ void draw(){
     }else{
     cursor(ARROW);
     }
-    if (selectedElements.get(i).elementType == Type.Circle){
-   
+    switch(selectedElements.get(i).elementType){
+    case Circle:
     ((Circle)selectedElements.get(i)).draw();
-    }else if(selectedElements.get(i).elementType == Type.Square)
-    {
+    break;
+    case Square:
       ((Square)selectedElements.get(i)).draw();
+      break;  
     }
     selectedElements.get(i).display();
     }
